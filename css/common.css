@@ -58,19 +58,23 @@
   
   #navigation ul
   {
-      margin: 0;
-      padding: 0;
+    margin: 0;
+    padding: 0;
   }
   
   #navigation ul li
   {
-      list-style-type: none;
-      display: inline;
+    list-style-type: none;
+    display: inline;
   }
   
   #navigation li:not(:first-child):before {
-      content: " | ";
-      color: black;
+    content: " | ";
+    color: black;
+  }
+
+  #navigation .icon {
+    display: none;
   }
 
   .mainContainer {
@@ -342,6 +346,18 @@
   }
 
   @media only screen and (max-width: 600px) {
+  a {
+      padding: 5px;
+  }
+
+  #navigation .icon {
+    display: block;
+    float: right;
+  }
+  #navigation ul {
+    display: none;
+  }
+
   .mainContainer {
     height: 100vh;
     width: 100vw;
@@ -439,6 +455,7 @@
     .footer > div.email > div.fdesc {
       grid-area: fdesc;
       text-align: center;
+      padding-left: 15px;
     }
     .footer > div.linkedin > div.fname {
       grid-area: fname;
@@ -446,7 +463,19 @@
     }
     .footer > div.linkedin > div.fdesc {
       grid-area: fdesc;
-      text-align: center;
+      padding-left: 0px;
+      width: 100%;
+    }
+    .linkedinDesc {
+      padding-left: 20px;
+      width: 100%;
+      border: 0px solid #931227;
+    }
+
+    .logo3 {
+      width: 20px;
+      height: 20px;
+      border: 0px solid #931227;
     }
     .footer > div.schedule > div.fname {
       grid-area: fname;

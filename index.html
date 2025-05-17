@@ -2,8 +2,10 @@
 <html>
 <head>
 	<title>Simina Popescu - Profil</title>
-	<link rel="stylesheet" href="css/index.css"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="js/app.js" type="module"></script>
+	<link rel="stylesheet" href="css/index.css"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 
@@ -23,6 +25,9 @@
 				<li><a href="valors.html">Valori</a></li>
 				<li><a href="services.html">Servicii și tarife</a></li>
 			</ul>
+			<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+				<i class="fa fa-bars"></i>
+			</a>
 		</div>
 	</div>
   </div>
@@ -111,9 +116,9 @@
 			<div class="footer-text">Follow Me</div>
 		</div>
 		<div class="fdesc">
-			<div><a href="https://www.linkedin.com/in/simina-maria-popescu-70155057/">
+			<a href="https://www.linkedin.com/in/simina-maria-popescu-70155057/" class="linkedinDesc">
 				<img src="images/linkedin.png" class="logo3"/>
-			</a></div>
+			</a>
 		</div>
 	</div>
 	<div class="schedule">
@@ -126,5 +131,20 @@
 	</div>
   </div>
 </div>
+
+<!--
+<script>
+	function myFunction() {
+		alert("Open menu");
+		var x = document.getElementById("myTopnav");
+		if (x.className === "topnav") {
+			x.className += " responsive";
+		} else {
+			x.className = "topnav";
+		}
+	}
+</script>
+-->
+
 </body>
 </html>
