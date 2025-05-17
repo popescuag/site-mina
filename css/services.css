@@ -1,0 +1,79 @@
+@import url("common.css");
+
+.mainContainer > div.content > div.innerContent {
+    grid-area: innerContent;
+    padding-left: 0px;
+    border: 0px solid #129328;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "contentHeader contentHeader"
+    "footer-left footer-right";
+    gap: 1px;
+    color: black;
+  }
+
+  .mainContainer > div.content > div.innerContent > div.contentHeader {
+    grid-area: contentHeader;
+    text-align: center;
+  }
+
+  .mainContainer > div.content > div.innerContent > div.footer-left {
+    grid-area: footer-left;
+    border: 0px solid #129328;
+    text-align: center;
+  }
+  .mainContainer > div.content > div.innerContent > div.footer-right {
+    grid-area: footer-right;
+    border: 0px solid #129328;
+    text-align: center;
+  }
+
+  .verylarge-text {
+    padding-top: 5px;
+    padding-left: 5px;
+    text-align: center;
+    font-family: workSans;
+    font-size: 56px;
+  }
+  
+  .large-text {
+    padding-top: 5px;
+    padding-left: 5px;
+    text-align: center;
+    font-family: workSans;
+    font-size: 20px;
+  }
+
+ @media only screen and (max-width: 700px) {
+  .mainContainer > div.content > div.innerContent {
+    grid-area: innerContent;
+    padding-left: 0px;
+    border: 0px solid #129328;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 20px 1fr 1fr;
+    grid-template-areas:
+    "contentHeader"
+    "footer-left"
+    "footer-right";
+    gap: 1px;
+    color: black;
+  }
+
+  .mainContainer > div.content > div.innerContent > div.contentHeader {
+    grid-area: contentHeader;
+    text-align: center;
+  }
+
+  .mainContainer > div.content > div.innerContent > div.footer-left {
+    grid-area: footer-left;
+    border: 0px solid #129328;
+    text-align: center;
+  }
+  .mainContainer > div.content > div.innerContent > div.footer-right {
+    grid-area: footer-right;
+    border: 0px solid #129328;
+    text-align: center;
+  }
+  }

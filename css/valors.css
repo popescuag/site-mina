@@ -1,0 +1,167 @@
+@import url("common.css");
+
+.mainContainer > div.content > div.innerContent {
+    grid-area: innerContent;
+    display: grid;
+    padding-left: 30px;
+    border: 0px solid #129328;
+    grid-template-columns: 4fr 6fr;
+    grid-template-areas:
+    "pictures description";
+    gap: 1px;
+  }
+
+  .mainContainer > div.content > div.innerContent > div.pictures {
+    grid-area: pictures;
+    display: grid;
+    grid-template-rows: 10fr 9fr 10fr;
+    border: 0px solid #129328;
+    text-align: right;
+  }
+  .mainContainer > div.content > div.innerContent > div.description {
+    grid-area: description;
+    display: grid;
+    grid-template-rows: 10fr 9fr 10fr;
+    text-align: left;
+    border: 0px solid #129328;
+    color: black;
+    grid-template-areas: 
+        "d-one"
+        "d-two" 
+        "d-three";
+  }
+
+  .mainContainer > div.content > div.innerContent > div.description > div.one {
+    grid-area: d-one;
+    text-align: left;
+    padding-top: 0px;
+    border: 0px solid #931227;
+  }
+  .mainContainer > div.content > div.innerContent > div.description > div.two {
+    grid-area: d-two;
+    text-align: left;
+    padding-top: 30px;
+    border: 0px solid #931227;
+  }
+  .mainContainer > div.content > div.innerContent > div.description > div.three {
+    grid-area: d-three;
+    text-align: left;
+    padding-top: 30px;
+    border: 0px solid #931227;
+  }
+
+  .mytext {
+    width:70%;
+    word-wrap:break-word;
+    border: none;
+    line-height: 24px;
+    font-family: avenirLight;
+    font-size: 16px;
+    padding-left: 20px;
+  }
+
+  .large-text {
+    padding-top: 5px;
+    padding-left: 20px;
+    text-align: left;
+    font-family: workSans;
+    font-size: 32px;
+    color: orange
+  }
+
+  .mainContainer {
+    display: grid;
+    grid-template-areas:
+      "header"
+      "content"
+      "footer";
+    grid-template-rows: 1fr 10fr 1fr;
+    gap: 1px;
+    background-color: white;
+    border: 0px solid #129328;
+  }
+
+    .mainContainer > div.content > div.innerContent > div.patience {
+      display: none;
+      width: 0px;
+    }
+
+    .mainContainer > div.content > div.innerContent > div.kindness {
+      display: none;
+      width: 0px;
+    }
+
+    .mainContainer > div.content > div.innerContent > div.compassion {
+      display: none;
+      width: 0px;
+    }
+
+  @media only screen and (max-width: 600px) {
+
+    .mainContainer > div.content > div.innerContent > div.pictures {
+      display: none;
+      width: 0px;
+    }
+
+    .mainContainer > div.content > div.innerContent > div.description {
+      display: none;
+      width: 0px;
+    }
+
+    .mainContainer > div.content > div.innerContent {
+    grid-area: innerContent;
+    display: grid;
+    padding-left: 5px;
+    border: 0px solid #129328;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "patience"
+    "kindness"
+    "compassion";
+    gap: 1px;
+  }
+
+  .mainContainer > div.content > div.innerContent > div.patience {
+    grid-area: patience;
+    border: 0px solid #129328;
+    text-align: left;
+    display: block;
+    width:100%;
+  }
+  .mainContainer > div.content > div.innerContent > div.kindness {
+    grid-area: kindness;
+    border: 0px solid #129328;
+    text-align: left;
+    padding-top: 20px;
+    display: block;
+    width:100%;
+  }
+  .mainContainer > div.content > div.innerContent > div.compassion {
+    grid-area: compassion;
+    border: 0px solid #129328;
+    text-align: left;
+    padding-top: 20px;
+    display: block;
+    width:100%;
+  }
+  .mytext {
+    width:90%;
+    word-wrap:break-word;
+    border: none;
+    line-height: 24px;
+    font-family: avenirLight;
+    font-size: 15px;
+    padding-left: 5px;
+    color: black;
+  }
+
+  .large-text {
+    padding-top: 5px;
+    padding-left: 5px;
+    text-align: left;
+    font-family: workSans;
+    font-size: 25px;
+    color: orange
+  }
+
+   }

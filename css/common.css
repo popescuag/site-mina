@@ -1,0 +1,479 @@
+@font-face {
+    font-family: avenirLight;
+    src: url(../fonts/AvenirNextW1GLight.ttf);
+    font-size: 14px;
+  }
+  
+  @font-face {
+    font-family: avenirBold;
+    src: url(../fonts/AvenirNextW1GBold.ttf);
+    font-size: 14px;
+  }
+  
+  @font-face {
+    font-family: avenirMedium;
+    src: url(../fonts/AvenirNextW1GMedium.ttf);
+    font-size: 14px;
+  }
+  
+  @font-face {
+    font-family: workSans;
+    src: url(../fonts/WorkSans-SemiBold.ttf);
+  }
+  
+  @font-face {
+    font-family: cormorantSemiBold;
+    src: url(../fonts/CormorantGaramond-SemiBold.ttf);
+  }
+  
+  @font-face {
+    font-family: cormorantSemiBoldItalic;
+    src: url(../fonts/CormorantGaramond-SemiBoldItalic.ttf);
+  }
+  
+  @font-face {
+    font-family: rastanty-cortez;
+    src: url(../fonts/rastanty-cortez.ttf);
+  }
+
+  * {
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  a {
+    text-decoration: none;
+    font-size: 18px;
+    font-family: avenirLight;
+    color: #000;
+    padding: 20px;
+  }
+  
+  a.disabled {
+    pointer-events: none;
+    color: orange;
+    font-size: 18px;
+    font-family: avenirBold;
+  }
+  
+  #navigation ul
+  {
+      margin: 0;
+      padding: 0;
+  }
+  
+  #navigation ul li
+  {
+      list-style-type: none;
+      display: inline;
+  }
+  
+  #navigation li:not(:first-child):before {
+      content: " | ";
+      color: black;
+  }
+
+  .mainContainer {
+    height: 100vh;
+    width: 100vw;
+    font-size: 20px;
+    margin: 0px;
+    background-color: white;
+    text-align: center;
+    color: white;
+    border: 0px solid #400808;
+
+    display: grid;
+    grid-template-areas:
+      "header"
+      "content"
+      "footer";
+    grid-template-rows: 100px 1fr 150px;
+    gap: 2px;
+}
+
+  .mainContainer > div {
+    /*background-color: rgba(246, 247, 243, 0.8);*/
+    padding: 10px;
+  }
+  .mainContainer > div.header {
+    grid-template-areas: "header-left header-right";
+    grid-template-columns: 1fr 1fr;
+    display: grid;
+    grid-area: header;
+    /*background-color: rgba(246, 247, 243, 0.8);*/
+    padding: 10px;
+    border: 0px solid #129328;
+  }
+  .mainContainer > div.header > div.header-right {
+    grid-area: header-right;
+    text-align: right;
+    border: 0px solid #129328;
+  }
+  .mainContainer > div.header > div.header-left {
+    grid-area: header-left;
+    text-align: left;
+    font-size: 18px;
+    font-family: avenirLight;
+    color: #000;
+    border: 0px solid #129328;
+  }
+  
+  .mainContainer > div.content {
+    grid-area: content;
+    padding-left: 30px;
+    border: 0px solid #129328;
+    display: grid;
+    grid-template-columns: 1fr 8fr 1fr;
+    grid-template-areas:
+    "pad-left innerContent pad-right";
+    gap: 1px;
+  }
+  .mainContainer > div.content > div.pad-left {
+    border: 0px solid #129328;
+    grid-area: pad-left;
+  }
+
+  .mainContainer > div.content > div.pad-right {
+    border: 0px solid #129328;
+    grid-area: pad-right;
+  }
+
+  .mainContainer > div.footer > div {
+    border: 0px solid #129328;
+  }
+  
+  .mainContainer > div.footer {
+    grid-area: footer;
+    display: grid;
+    grid-template-areas:
+      "h h h h"
+      "phone email linkedin schedule";
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 25px 1fr;
+    border: 0px solid #301293;
+  }
+  
+  .mainContainer > div.footer > div.h {
+    grid-area: h;
+    border: 0px solid #301293;
+  }
+  .mainContainer > div.footer > div.phone {
+    grid-area: phone;
+    border: 0px solid #301293;
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+    grid-template-areas:
+      "fname"
+      "fdesc";
+  }
+  .mainContainer > div.footer > div.phone > div.fname {
+    grid-area: fname;
+    text-align: left;
+    padding-top: 0px;
+    border: 0px solid #931227;
+  }
+  .mainContainer > div.footer > div.phone > div.fdesc {
+    grid-area: fdesc;
+    text-align: left;
+    padding-top: 0px;
+    border: 0px solid #931227;
+  }
+
+  .mainContainer > div.footer > div.email {
+    grid-area: email;
+    border: 0px solid #301293;
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+    grid-template-areas:
+      "fname"
+      "fdesc";
+  }
+  .mainContainer > div.footer > div.email > div.fname {
+    grid-area: fname;
+    text-align: left;
+    padding-top: 0px;
+    border: 0px solid #931227;
+  }
+  .mainContainer > div.footer > div.email > div.fdesc {
+    grid-area: fdesc;
+    text-align: left;
+    padding-top: 0px;
+    border: 0px solid #931227;
+  }
+
+  .mainContainer > div.footer > div.linkedin {
+    grid-area: linkedin;
+    border: 0px solid #301293;
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+    grid-template-areas:
+      "fname"
+      "fdesc";
+  }
+  .mainContainer > div.footer > div.linkedin > div.fname {
+    grid-area: fname;
+    text-align: left;
+    padding-top: 0px;
+    border: 0px solid #931227;
+  }
+  .mainContainer > div.footer > div.linkedin > div.fdesc {
+    grid-area: fdesc;
+    text-align: left;
+    padding-left: 5px;
+    border: 0px solid #931227;
+  }
+
+  .mainContainer > div.footer > div.schedule {
+    grid-area: schedule;
+    border: 0px solid #301293;
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+    grid-template-areas:
+      "fname"
+      "fdesc";
+  }
+  .mainContainer > div.footer > div.schedule > div.fname {
+    grid-area: fname;
+    text-align: left;
+    padding-top: 0px;
+    border: 0px solid #931227;
+  }
+  .mainContainer > div.footer > div.schedule > div.fdesc {
+    grid-area: fdesc;
+    text-align: left;
+    padding-top: 0px;
+    border: 0px solid #931227;
+  }
+
+
+
+  .mainContainer > div.footer > div.two {
+    grid-area: two;
+  }
+  .mainContainer > div.footer > div.three {
+    grid-area: three;
+  }
+  .mainContainer > div.footer > div.four {
+    grid-area: four;
+  }
+
+  .cormorant-text {
+    padding-top: 5px;
+    padding-left: 5px;
+    text-align: left;
+    font-family: cormorantSemiBold;
+    font-size: 20px;
+  }
+  
+  .cormorant-text-pad {
+    padding-top: 5px;
+    padding-left: 220px;
+    font-family: cormorantSemiBold;
+    font-size: 20px;
+    color: black
+  }
+  
+  .cormorant-italic-text {
+    padding-top: 5px;
+    padding-left: 5px;
+    text-align: left;
+    font-family: cormorantSemiBoldItalic;
+    font-size: 20px;
+  }
+  
+  .rastanty-cortez-text {
+    padding-top: 5px;
+    padding-left: 5px;
+    text-align: left;
+    font-family: rastanty-cortez;
+    font-size: 128px;
+  }
+  
+  .light-text-pad {
+    font-size: 16px;
+    padding-top: 1px;
+    padding-left: 25px;
+    font-family: avenirLight;
+    color: #000;
+  }
+
+  .light-text-pad-1 {
+    font-size: 16px;
+    padding-top: 1px;
+    padding-left: 5px;
+    font-family: avenirLight;
+    color: #000;
+  }
+
+  .medium-text {
+    font-size: 16px;
+    padding-top: 5px;
+    padding-left: 5px;
+    font-family: avenirMedium;
+  }
+  
+  .light-text {
+    font-size: 16px;
+    padding-top: 1px;
+    padding-left: 5px;
+    font-family: avenirLight;
+  }
+
+  .footer-text {
+    padding-top: 0px;
+    padding-left: 25px;
+    text-align: left;
+    font-family: workSans;
+    font-size: 18px;
+    color: #000;
+  }
+
+  .logo {
+    width: 30px;
+    height: 30px;
+    float: left;
+  }
+
+  .logo3 {
+    width: 20px;
+    height: 20px;
+    padding-left: 0px;
+  }
+
+  @media only screen and (max-width: 600px) {
+  .mainContainer {
+    height: 100vh;
+    width: 100vw;
+    font-size: 20px;
+    margin: 0px;
+    background-color: white;
+    text-align: center;
+    color: white;
+    border: 0px solid #400808;
+
+    display: grid;
+    grid-template-areas:
+      "header"
+      "content"
+      "footer";
+    grid-template-rows: 100px 1fr 250px;
+    gap: 2px;
+}
+
+    div.pad-left {
+      display: none;
+      width: 0px;
+    }
+    div.pad-right {
+      display: none;
+      width: 0px;
+    }
+    .mainContainer > div.footer {
+      display: grid;
+      grid-template-areas: 
+       "h"
+       "phone"
+       "email"
+       "linkedin"
+       "schedule";
+      grid-template-columns: 1fr;
+    }
+
+    .footer > div.h {
+      grid-area: h;
+      text-align: center;
+    }
+    .footer > div.phone {
+      grid-area: phone;
+      display: grid;
+      grid-template-areas: 
+        "fname"
+        "fdesc";
+      grid-template-columns: 1fr;
+      grid-template-rows: 2fr 1fr;
+      text-align: center;
+    };
+    .footer > div.email {
+      grid-area: email;
+      display: grid;
+      grid-template-areas: 
+        "fname"
+        "fdesc";
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 2fr;
+      text-align: center;
+    };
+    .footer > div.linkedin {
+      grid-area: linkedin;
+      display: grid;
+      grid-template-areas: 
+        "fname"
+        "fdesc";
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 2fr;
+      text-align: center;
+    };
+    .footer > div.schedule {
+      grid-area: schedule;
+      display: grid;
+      grid-template-areas: 
+        "fname"
+        "fdesc";
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 2fr;
+      text-align: center;
+    };
+    .footer > div.phone > div.fname {
+      grid-area: fname;
+      text-align: center;
+    }
+    .footer > div.phone > div.fdesc {
+      grid-area: fdesc;
+      text-align: center;
+    }
+    .footer > div.email > div.fname {
+      grid-area: fname;
+      text-align: center;
+    }
+    .footer > div.email > div.fdesc {
+      grid-area: fdesc;
+      text-align: center;
+    }
+    .footer > div.linkedin > div.fname {
+      grid-area: fname;
+      text-align: center;
+    }
+    .footer > div.linkedin > div.fdesc {
+      grid-area: fdesc;
+      text-align: center;
+    }
+    .footer > div.schedule > div.fname {
+      grid-area: fname;
+      text-align: center;
+    }
+    .footer > div.schedule > div.fdesc {
+      grid-area: fdesc;
+      text-align: center;
+    }
+
+    .mainContainer > div.content {
+      grid-area: content;
+      padding-left: 10px;
+      border: 0px solid #129328;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-areas:
+      "innerContent";
+      gap: 1px;
+    }
+
+    .rastanty-cortez-text {
+      padding-top: 5px;
+      padding-left: 5px;
+      text-align: left;
+      font-family: rastanty-cortez;
+      font-size: 57px;
+      color: black;
+    }
+  }

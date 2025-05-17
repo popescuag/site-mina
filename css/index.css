@@ -1,0 +1,174 @@
+@import url("common.css");
+
+.mainContainer > div.content > div.innerContent {
+    grid-area: innerContent;
+    display: grid;
+    padding-left: 30px;
+    border: 0px solid #129328;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "content-left content-right";
+    gap: 1px;
+  }
+
+  .mainContainer > div.content > div.innerContent > div.content-left {
+    grid-area: content-left;
+    text-align: right;
+    position: relative;
+  }
+  .mainContainer > div.content > div.innerContent > div.content-right {
+    grid-area: content-right;
+    text-align: left;
+    color: black
+  }
+
+  .logo2 {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left:0px;
+    top: 370px;
+  }
+
+  .l2 {
+    width: 50px;
+    height: 50px;
+  }
+
+  .head {
+    position: absolute;
+    right:100px;
+    top: 0px;
+  }
+
+  .cormorant-text {
+    padding-top: 5px;
+    padding-left: 40px;
+    text-align: left;
+    font-family: cormorantSemiBold;
+    font-size: 20px;
+    color: black;
+  }
+
+  .cormorant-italic-text {
+    padding-top: 5px;
+    padding-left: 40px;
+    text-align: left;
+    font-family: cormorantSemiBoldItalic;
+    font-size: 20px;
+    color: black;
+  }
+
+  .mainContainer > div.content > div.innerContent > div.row1 {
+    display: none;
+    width: 0px;
+  }
+
+  .mainContainer > div.content > div.innerContent > div.row2 {
+    display: none;
+    width: 0px;
+  }
+
+  .mainContainer > div.content > div.innerContent > div.row3 {
+    display: none;
+    width: 0px;
+  }
+
+  @media only screen and (max-width: 600px) {
+   .mainContainer > div.content > div.innerContent > div.content-left {
+      display: none;
+      width: 0px;
+    }
+    .mainContainer > div.content > div.innerContent > div.content-right {
+      display: none;
+      width: 0px;
+    }
+
+    .mainContainer > div.content > div.innerContent {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 270px 70px 1fr;
+      border: 0px solid #129328;
+      padding-left: 10px;
+      grid-template-areas:
+      "row1"
+      "row2"
+      "row3";
+    }
+
+    .mainContainer > div.content > div.innerContent > div.row1 {
+      grid-area: row1;
+      text-align: center;
+      border: 0px solid #129328;
+      display: block;
+      width:100%;
+    }
+
+    .mainContainer > div.content > div.innerContent > div.row2 {
+      grid-area: row2;
+      text-align: center;
+      border: 0px solid #129328;
+      display: block;
+      width:100%;
+    }
+
+    .mainContainer > div.content > div.innerContent > div.row3 {
+      grid-area: row3;
+      text-align: center;
+      border: 0px solid #129328;
+      display: block;
+      width:100%;
+    }
+
+    .logo2 {
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      left:30px;
+      top: 400px;
+    }
+
+    .head{
+      border: 0px solid #129328;
+    }
+    .headImg {
+      display: block;
+      margin: auto;
+      width: 80%;
+    }
+
+    .cormorant-text-pad {
+      padding-top: 20px;
+      padding-left: 150px;
+      font-family: cormorantSemiBold;
+      font-size: 15px;
+      color: black
+    }
+
+    .rastanty-cortez-text {
+        padding-top: 5px;
+        padding-left: 65px;
+        text-align: left;
+        font-family: rastanty-cortez;
+        font-size: 57px;
+        color: black;
+    }
+
+    .cormorant-italic-text {
+      padding-top: 35px;
+      padding-left: 10px;
+      text-align: left;
+      font-family: cormorantSemiBoldItalic;
+      font-size: 15px;
+      color: black;
+    }
+
+    .cormorant-text {
+      padding-top: 5px;
+      padding-left: 10px;
+      text-align: left;
+      font-family: cormorantSemiBold;
+      font-size: 15px;
+      color: black;
+    }
+  }
