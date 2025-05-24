@@ -24,7 +24,7 @@
 					<li><a href="valors.html">Valori</a></li>
 					<li><a href="services.html">Servicii și tarife</a></li>
 				</ul>
-				<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+				<a href="javascript:void(0);" class="icon" onclick="myFunction()" style="position:relative; right:10px;">
 					<i class="fa fa-bars"></i>
 				</a>
 			</div>
@@ -112,6 +112,45 @@
 		</div>
 	  </div>
 </div>
+
+<div id="mobileMenu" class="mobile-menu">
+  <a href="javascript:void(0);" class="closebtn" id="closeMobileMenu">&times;</a>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="personal.html">Despre mine</a></li>
+    <li><a href="valors.html">Valori</a></li>
+    <li><a href="services.html">Servicii și tarife</a></li>
+  </ul>
+</div>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("navigation");
+  if (x && x.className === "topnav") {
+    x.className += " responsive";
+  } else if (x) {
+    x.className = "topnav";
+  }
+
+  // Open mobile menu on mobile
+  if (window.innerWidth <= 600) {
+    document.getElementById("mobileMenu").style.width = "200px";
+  }
+}
+
+// Close mobile menu
+function closeMobileMenu() {
+  document.getElementById("mobileMenu").style.width = "0";
+}
+
+document.getElementById("closeMobileMenu").onclick = closeMobileMenu;
+
+Array.from(document.querySelectorAll('#mobileMenu a[href]')).forEach(function(link) {
+  link.addEventListener('click', function() {
+    closeMobileMenu();
+  });
+});
+</script>
 
 </body>
 </html>
