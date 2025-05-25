@@ -87,7 +87,7 @@
     .mainContainer > div.content > div.innerContent {
       display: grid;
       grid-template-columns: 1fr;
-      grid-template-rows: 270px 70px 1fr;
+      grid-template-rows: 300px 70px 1fr;
       border: 0px solid #129328;
       padding-left: 10px;
       grid-template-areas:
@@ -109,6 +109,7 @@
       text-align: center;
       border: 0px solid #129328;
       display: block;
+
       width:100%;
     }
 
@@ -117,6 +118,7 @@
       text-align: center;
       border: 0px solid #129328;
       display: block;
+      padding-top: 20px;
       width:100%;
     }
 
@@ -125,7 +127,7 @@
       height: 50px;
       position: absolute;
       left:30px;
-      top: 430px;
+      top: 460px;
     }
 
     .head{
@@ -135,6 +137,7 @@
       display: block;
       margin: auto;
       width: 80%;
+      height: auto;
     }
 
     .cormorant-text-pad {
