@@ -125,7 +125,7 @@
       height: 50px;
       position: absolute;
       left:30px;
-      top: 400px;
+      top: 430px;
     }
 
     .head{
@@ -146,7 +146,7 @@
     }
 
     .rastanty-cortez-text {
-        padding-top: 5px;
+        padding-top: 35px;
         padding-left: 65px;
         text-align: left;
         font-family: rastanty-cortez;
@@ -164,7 +164,7 @@
     }
 
     .cormorant-text {
-      padding-top: 5px;
+      padding-top: 35px;
       padding-left: 10px;
       text-align: left;
       font-family: cormorantSemiBold;
