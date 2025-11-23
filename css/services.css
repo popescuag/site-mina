@@ -5,10 +5,10 @@
     padding-left: 0px;
     border: 0px solid #129328;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
-    "contentHeader contentHeader"
-    "footer-left footer-right";
+    "contentHeader contentHeader contentHeader"
+    "footer-left footer-center footer-right";
     gap: 1px;
     color: black;
   }
@@ -20,6 +20,11 @@
 
   .mainContainer > div.content > div.innerContent > div.footer-left {
     grid-area: footer-left;
+    border: 0px solid #129328;
+    text-align: center;
+  }
+  .mainContainer > div.content > div.innerContent > div.footer-center {
+    grid-area: footer-center;
     border: 0px solid #129328;
     text-align: center;
   }
@@ -52,10 +57,11 @@
     border: 0px solid #129328;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 20px 1fr 1fr;
+    grid-template-rows: 20px 1fr 1fr 1fr;
     grid-template-areas:
     "contentHeader"
     "footer-left"
+    "footer-center"
     "footer-right";
     gap: 1px;
     color: black;
@@ -70,10 +76,18 @@
     grid-area: footer-left;
     border: 0px solid #129328;
     text-align: center;
+    padding-top: 30px;
+  }
+  .mainContainer > div.content > div.innerContent > div.footer-center {
+    grid-area: footer-center;
+    border: 0px solid #129328;
+    text-align: center;
+    padding-top: 30px;
   }
   .mainContainer > div.content > div.innerContent > div.footer-right {
     grid-area: footer-right;
     border: 0px solid #129328;
     text-align: center;
+    padding-top: 30px;
   }
   }
